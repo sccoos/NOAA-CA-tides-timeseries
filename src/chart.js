@@ -1,7 +1,7 @@
 import * as d3 from "d3";
 
 export function mountChart(container, data) {
-  const colors = ["#0072b2", "#d55e00", "#009e73"];
+  const colors = ["#d55e00", "#009e73", "#0072b2"];
   const series = data.stations.map((s, i) => ({...s, color: colors[i], values: s.values.map(d => ({date: d3.utcParse("%Y-%m-%d")(d.date), value: d.feet}))}));
   const svg = d3.select(container).append("svg").attr("role", "img").attr("tabindex", 0).attr("aria-label", `Trailing seven-day mean water level in feet relative to each station's mean sea level datum for ${data.year}. Focus and use left and right arrows to inspect dates.`);
   let selectedDate = null;
