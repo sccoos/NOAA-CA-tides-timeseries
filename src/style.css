@@ -1,0 +1,16 @@
+:root { font-family: system-ui, sans-serif; color: #183446; background: white; }
+html, body, #observablehq-center, #observablehq-main { width: 100%; height: 100%; margin: 0; padding: 0; max-width: none; }
+#observablehq-toc, #observablehq-footer { display: none; }
+#chart { width: 100%; height: 100%; }
+#chart svg { display: block; width: 100%; height: 100%; }
+.axis { color: #60717a; font-size: 11px; }
+.axis .domain, .grid .domain { display: none; }
+.grid line { stroke: #e6eeee; }
+.zero { stroke: #4e6068; stroke-width: 1.75; stroke-dasharray: 6 3; }
+.zero-label { fill: #40555f; font-size: 11px; font-weight: 650; paint-order: stroke; stroke: white; stroke-width: 4px; stroke-linejoin: round; }
+.guide { stroke: #809399; stroke-dasharray: 3 3; pointer-events: none; }
+.legend-label, .axis-label, .hover-label { fill: #334d58; font-size: 12px; }
+.chart-title { fill: #183446; font-size: 16px; font-weight: 650; }
+@media (max-width: 600px) { .chart-title { font-size: 11px; } }
+.hover-bg { fill: white; fill-opacity: .94; stroke: #dce8e8; }
+svg:focus-visible { outline: 2px solid #0072b2; outline-offset: -2px; }
